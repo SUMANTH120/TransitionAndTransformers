@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid yellow;
+            background-color: bisque;
+        }
+        .container>img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            
+        }
+        img{
+            transition: all 4s;
+            transition-delay: 2s;
+            position: relative;
+            left: 160px;
+        }
+        .container>.rotate:focus-within~img{
+            /* transform: rotateX(180deg); */
+            transform: rotateZ(1000deg);
+        }
+        .container>.translate:hover~img{
+            /* transform: rotateX(180deg); */
+            transform:translate(300px,150px);
+        }
+        .container>.scale:focus-within~img{
+            /* transform: rotateX(180deg); */
+            transform:scale(2);
+        }
+        .container>.skew:focus-within~img{
+            transform: skew(360deg);
+        }
+        button{
+            padding-right: 20px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="translate">Translate</button>
+        <button class="rotate">Rotate</button>
+        <button class="scale">Scale</button>
+        <button class="skew">Skew</button>
+    
+    
+    <img src="https://www.svgrepo.com/show/503335/fan.svg" alt="" width="200px">
+
+    </div>
+    
+</body>
+</html>
