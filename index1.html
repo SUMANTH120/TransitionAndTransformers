@@ -38,11 +38,32 @@
             transform: skew(360deg);
         }
         button{
-            padding-right: 20px;
+            padding:10px 20px;
             margin-right: 50px;
+            
         }
         .container>.matrix:focus-within~img{
             transform: matrix(2, -0.3, 0, 2, 500, 100);
+        }
+        @media only screen and (max-width:480px) {
+            .container>img{
+                height: 40vh;
+                left:0;
+            }
+            button {
+                padding: 6px 12px;
+                margin: 6px;
+            }
+            .container>.translate:hover~img{
+            
+            transform:translate(100px,50px);}
+            .container>.scale:hover~img{
+            
+            transform:scale(1.5);}
+        }
+        
+        .matrix{
+            margin-top: 15px;
         }
     </style>
 </head>
